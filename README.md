@@ -6,7 +6,9 @@ ML examples:
   <li> Computer vision </li>
   <li> Product Recommendations </li>
 </ul>
+
 ## Supervised Learning 
+
 Used in:
 <ul>
   <li> Regression problems (i.e:predict a continuous value) </li>
