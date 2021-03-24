@@ -20,7 +20,8 @@ Used in:
 Used in:
 <ul>
   <li> Clustering data (i.e: market segmentation,social network analysis, organize computing clusters..  </li>
-  <li> Audio processing (SVD - Singular Value Decomposition , i.e: split voices that came from two different sources(
+  <li> Audio processing (SVD - Singular Value Decomposition , i.e: split voices that came from two different sources)</li>
+  <li> PCA (Principal Component Analysis) (If there are many features we can reduce them using PCA)
 </ul>
 
 ## Reinforcement Learning
