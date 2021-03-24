@@ -12,7 +12,7 @@ ML examples:
 Used in:
 <ul>
   <li> Regression problems (i.e:predict a continuous value). Can be linear or logistic regression </li>
-  <li> Classification problems (discrete values outputs, i.e:yes or not , can have more that two outputs)</li>
+  <li> Classification problems (discrete values outputs, i.e:yes or not , can have more than two outputs)</li>
 </ul>
   
 ## Unsupervised Learning
