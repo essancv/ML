@@ -1,6 +1,7 @@
 import numpy as np
+import math
 
-def UTIT_random_mini_batches (X, Y, mini_batch_size = 64, seed = 505):
+def UTIL_random_mini_batches (X, Y, mini_batch_size = 64, seed = 505):
     """
     Creates a list of random minibatches from (X, Y)
     
@@ -39,3 +40,4 @@ def UTIT_random_mini_batches (X, Y, mini_batch_size = 64, seed = 505):
         mini_batch = (mini_batch_X, mini_batch_Y)
         mini_batches.append(mini_batch)
     
+    return mini_batches
