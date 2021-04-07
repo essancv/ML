@@ -1,6 +1,48 @@
 import numpy as np
 import math
 
+def UTIL_FeatureNormalization (X,debug=False):
+    # Inputs
+    # X is a pandad dataframe 
+    # Outputs
+    # Normalizaded data 
+    
+    if debug:
+        print('UTIL_FeatureNormalization, Input Data',X.head())
+        print('UTIL_FeatureNormalization, describe ()',X.describe())
+    X_norm = (X - X.mean()) / X.std ()
+    if debug:
+        print('UTIL_FeatureNormalization,Output Data',X_norm.head())
+    return X_norm , X.mean (), X.std ()
+
+def UTIL_getXMatrix (x):
+    """
+    Obtener matriz X para posterior pocesamiento, se añade una columna de '1'
+    X es la matriz con las muestras
+    """
+    m = x.shape[0] # Número de muestras
+    return np.insert (x,0,1, axis=1)
+
+def UTIL_initVTheta (n_variables,type='random'):
+    """
+    Inicializacion de theta, 
+    n_variables es el número de variables que se usarán en la regresión lineal
+    """
+    assert type in ['random','zeros'], "Posiles valores de type ['random','zeros']"
+    if type == 'random':
+        return np.random.randn (1 , n_variables + 1)
+    else:
+        return np.zeros((1,n_variables +1))
+
+def UTIL_getXMatrix (x):
+    """
+    Obtener matriz X para posterior pocesamiento, se añade una columna de '1'
+    X es la matriz con las muestras
+    """
+    m = x.shape[0] # Número de muestras
+    return np.insert (x,0,1, axis=1)
+
+    
 def UTIL_random_mini_batches (X, Y, mini_batch_size = 64, seed = 505):
     """
     Creates a list of random minibatches from (X, Y)
