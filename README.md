@@ -18,7 +18,7 @@ Used in:
     <li> Neural Networks </li>
     <ul>
       <li> High Bias (underfitten): More layers, more training , other NN architecture) </li>
-      <li> Hign Variance (overfitten): More data, regularization, otjer NN architecture) </li>
+      <li> Hign Variance (overfitten): More data, regularization, other NN architecture) </li>
     </ul>
   </ul>
     </li>
