@@ -16,6 +16,10 @@ Used in:
   <ul>
     <li> Logistic Regression </li>
     <li> Neural Networks </li>
+    <ul>
+      <li> High Bias (underfitten): More layers, more training , other NN architecture) </li>
+      <li> Hign Variance (overfitten): More data, regularization, otjer NN architecture) </li>
+    </ul>
   </ul>
     </li>
 </ul>
