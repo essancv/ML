@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 sys.path.append ('../src') 
-from utils import UTIL_FeatureNormalization,UTIL_initVTheta,UTIL_getXMatrix,UTIL_random_mini_batches
+from ML_utils import UTIL_FeatureNormalization,UTIL_initVTheta,UTIL_getXMatrix,UTIL_random_mini_batches
 import pandas as pd
 from sklearn.metrics import mean_squared_error, r2_score
 from tqdm import tqdm
@@ -38,7 +38,7 @@ def LogR_CalculateGrads (theta,x,y,lambd):
     return grads
     
 class LogisticRegression:
-    def __init__ (self,optimizer="GD" ,normalization=True, minibatch=False,lr_lambda=0.0,kargs={'lambda':0.0,'mini_batch_size':2**10}):
+    def __init__ (self,optimizer="GD" ,normalization=True, minibatch=False,lr_lambda=0.0,debug=False,kargs={'lambda':0.0,'mini_batch_size':2**10}):
         assert optimizer in ["GD","Optimize"],"Possible optimizers are 'GD,Optimize'"
         self.optimizer  = optimizer
         self.lr_lambda  = lr_lambda
@@ -54,6 +54,7 @@ class LogisticRegression:
         self.vtheta = None
         self.kargs = kargs
         self.costs = []
+        self.debug = debug
     
     def _initializeData (self,X,Y ):
         assert X.shape [0] == Y.shape[0] , "Revisar dimensiones X e Y"
@@ -72,7 +73,7 @@ class LogisticRegression:
         
     def train (self,X,Y):
         self._initializeData (X,Y)
-        self.vtheta = UTIL_initVTheta (self.n, type=self.kargs['theta_init'])
+        self.vtheta = UTIL_initVTheta (self.n, type=self.kargs['theta_init'],kargs=self.kargs)
         if self.optimizer == 'Optimize':
             self._calculateOptimize ()
             assert self.vtheta.shape [1] == self.n + 1
@@ -97,6 +98,8 @@ class LogisticRegression:
     def _calculateOptimize (self):
         vtheta = minimize(fun= LogR_CostFunction, x0=self.vtheta.T, method='TNC', jac=LogR_CalculateGrads,args=(self.X, self.Y.flatten(),self.kargs['lambda']))
         self.vtheta =  np.array(vtheta.x).reshape (1,len(vtheta.x))
+        if self.debug :
+            print ('LogR - _calculateOptimize, success {} , message {}'.format(vtheta.success,vtheta.message))
         
         
     def predict (self, X ):
@@ -161,10 +164,10 @@ class LogisticRegression:
 
         epsilon = 1e-10   # Incluido para evitar divisiones por 0
         regularization = (self.kargs['lambda'] /(2*self.m)) * np.sum (self.vtheta[0][1:]**2)
-        #print ('CostFunction, regularization',regularization)
-        #print ('CostFunction, prediction',prediction[0:5])
         J = - ( 1 / self.m) * ( np.dot(self.Y.T, np.log(prediction+epsilon)) + np.dot((1-self.Y).T, np.log(1-prediction+epsilon))) + regularization
         J = np.squeeze (J)
+        if self.debug:
+            print ('LogR - _costFunction, regularization {} , J {} '.format(regularization,J))
         assert J.shape == ()
         return J
 
@@ -178,9 +181,12 @@ class LogisticRegression:
         error = np.array (error).reshape(1, self.m)
         regularization = (self.kargs['lambda'] / self.m ) * self.vtheta
         regularization [0] [0]= 0    #Theta 0 no tiene regularization
-        grads1 =  (1/self.m) * np.dot ((prediction-self.Y).T,self.X) + regularization
-        grads2 =  ( 1 / self.m ) * error.dot (self.X) + regularization
-        return grads1
+        grads =  (1/self.m) * np.dot ((prediction-self.Y).T,self.X) + regularization
+#        grads2 =  ( 1 / self.m ) * error.dot (self.X) + regularization
+        if self.debug:
+            print ('LogR - _calculateGrads, grads {}  '.format(grads))
+        
+        return grads
     
 
     def _updateThetas (self,vgrads,learning_rate=1e-2):
