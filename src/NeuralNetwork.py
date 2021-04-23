@@ -87,7 +87,7 @@ class NNClassifier:
         prediction = np.array (prediction)
         delta = {}
         deltai = prediction - Y
-        delta ['delta'+str(self.n_layers) ] = deltai 
+        delta ['delta'+str(self.n_layers) ] = deltai
         for i in reversed (range(2,self.n_layers)):
             ai = cache['a'+str(i)]
             if self.bias:
