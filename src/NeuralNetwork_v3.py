@@ -45,9 +45,12 @@ class NNClassifier_V3:
 
     def __WDCost (self, costshistory,limit=10):
         try:
-            assert np.argmax (costshistory[-limit:]) < (limit - 1),'No parece que GD esté convergiendo revisa parámetros '
+            coststoverify = costshistory[-limit:]
+            if len (coststoverify) == limit:
+                consecutiveincrs = [coststoverify[i:i+1] <= coststoverify[i+1:i+2] for i in range (limit-1)]
+                assert not all (consecutiveincrs), 'No parece que GD esté convergiendo revise sus parámetros'        
         except:
-           raise        
+           raise     
         
     def __batchGD (self, X,Y, l2_lambda=0.0,training=True):
         costs = []
@@ -58,28 +61,6 @@ class NNClassifier_V3:
             cost = self.__oneStepTraining (X,Y,i,l2_lambda=l2_lambda,training=training)
             costs.append (cost)
             self.__WDCost (costs)
-            
-            """
-            prediction = self.__forward (X,training)
-            assert prediction.shape == Y.shape
-            cost = self.costFunction (Y,prediction,l2_lambda)
-            assert not math.isnan(cost) , "Cost es NaN , revise los parámetros"
-            if cost >= prev_cost:
-                not_convergency_counter += 1
-                prev_cost = cost
-            else:
-                not_convergency_counter = 0
-                prev_cost = cost
-
-            assert not_convergency_counter <= 10 , 'No parece que GD esté convergiendo revisa alpha ' + str(lr) + ',cost ' + str(cost) + 'iteration ' + str(i)
-
-            costs.append (cost)
-            self.__backward (prediction,Y,training)
-            if self.print_cost and i % 100 == 0:
-                print ("Cost after iteration %i: %f" %(i, cost))
-                
-            self.optimizationF.optimize (i+1)
-            """
         return costs 
 
      
@@ -94,26 +75,6 @@ class NNClassifier_V3:
                 cost = self.__oneStepTraining (miniBatchX,miniBatchY,i,l2_lambda=l2_lambda,training=training)
                 costs.append (cost)
                 self.__WDCost (costs)
-                """
-                prediction = self.__forward (miniBatchX,training)
-                assert prediction.shape == miniBatchY.shape
-                cost = self.costFunction (miniBatchY,prediction,l2_lambda)
-                assert not math.isnan(cost) , "Cost es NaN , revise los parámetros"
-                    
-                if cost >= prev_cost:
-                    not_convergency_counter += 1
-                    prev_cost = cost
-                else:
-                    not_convergency_counter = 0
-                    prev_cost = cost
-
-                assert not_convergency_counter <= 10 , 'No parece que GD esté convergiendo revisa alpha ' + str(lr) + ',cost ' + str(cost) + 'iteration ' + str(i)
-
-                costs.append (cost)
-                self.__backward (prediction,miniBatchY,training)
-
-                self.optimizationF.optimize (i+1)
-                """
         return costs  
 
     def __oneStepTraining (self,X,Y,iteration,l2_lambda=0.0,training=True):

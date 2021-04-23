@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 sys.path.append ('../src') 
-from utils import UTIL_FeatureNormalization,UTIL_initVTheta,UTIL_getXMatrix,UTIL_random_mini_batches
+from ML_utils import UTIL_FeatureNormalization,UTIL_initVTheta,UTIL_getXMatrix,UTIL_random_mini_batches
 import pandas as pd
 from sklearn.metrics import mean_squared_error, r2_score
 from tqdm import tqdm
