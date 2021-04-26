@@ -20,6 +20,7 @@ Used in:
       <li> High Bias (underfitting): More layers, more training , other NN architecture) </li>
       <li> Hign Variance (overfitting): More data, regularization (l2,dropout), other NN architecture) </li>
     </ul>
+    <li> SVM (Support Vector Machines) </li>
   </ul>
     </li>
 </ul>
