@@ -36,7 +36,7 @@ Used in:
 Algorithms:
 <ul>
   <li> K-Means (Clustering)</li>
-  <li> PCA  (Dimensionality reduction)</li>
+  <li> PCA  (Dimensionality reduction:compress data, data visualization)</li>
 </ul>
 
 ## Reinforcement Learning
