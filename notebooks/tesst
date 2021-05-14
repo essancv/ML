@@ -1,0 +1,70 @@
+print("Downloading movielens data...")
+from urllib.request import urlretrieve
+import zipfile
+
+urlretrieve("http://files.grouplens.org/datasets/movielens/ml-100k.zip", "movielens.zip")
+zip_ref = zipfile.ZipFile('movielens.zip', "r")
+zip_ref.extractall()
+import pandas as pd
+# Load each data set (users, movies, and ratings).
+users_cols = ['user_id', 'age', 'sex', 'occupation', 'zip_code']
+users = pd.read_csv(
+    'ml-100k/u.user', sep='|', names=users_cols, encoding='latin-1')
+
+ratings_cols = ['user_id', 'movie_id', 'rating', 'unix_timestamp']
+ratings = pd.read_csv(
+    'ml-100k/u.data', sep='\t', names=ratings_cols, encoding='latin-1')
+
+# The movies file contains a binary feature for each genre.
+genre_cols = [
+    "genre_unknown", "Action", "Adventure", "Animation", "Children", "Comedy",
+    "Crime", "Documentary", "Drama", "Fantasy", "Film-Noir", "Horror",
+    "Musical", "Mystery", "Romance", "Sci-Fi", "Thriller", "War", "Western"
+]
+movies_cols = [
+    'movie_id', 'title', 'release_date', "video_release_date", "imdb_url"
+] + genre_cols
+movies = pd.read_csv(
+    'ml-100k/u.item', sep='|', names=movies_cols, encoding='latin-1')
+# Compute the number of movies to which a genre is assigned.
+genre_occurences = movies[genre_cols].sum().to_dict()
+import numpy as np
+# Since some movies can belong to more than one genre, we create different
+# 'genre' columns as follows:
+# - all_genres: all the active genres of the movie.
+# - genre: randomly sampled from the active genres.
+def mark_genres(movies, genres):
+    def get_random_genre(gs):
+        active = [genre for genre, g in zip(genres, gs) if g==1]
+        if len(active) == 0:
+            return 'Other'
+        return np.random.choice(active)
+    def get_all_genres(gs):
+        active = [genre for genre, g in zip(genres, gs) if g==1]
+        if len(active) == 0:
+            return 'Other'
+        return '-'.join(active)
+  
+    movies['genre'] = [
+      get_random_genre(gs) for gs in zip(*[movies[genre] for genre in genres])]
+    movies['all_genres'] = [
+      get_all_genres(gs) for gs in zip(*[movies[genre] for genre in genres])]
+
+mark_genres(movies, genre_cols)
+
+# Create one merged DataFrame containing all the movielens data.
+movielens = ratings.merge(movies, on='movie_id').merge(users, on='user_id')
+# Rating matrix
+n_users = users.values.shape[0]
+print (n_users)
+n_movies = movies.values.shape[0]
+print (n_movies*n_users)
+Y = np.zeros (((n_movies+1),(n_users+1)))
+for i in range (movielens.values.shape[0]):
+    user,movie ,rate = movielens ['user_id'][i] , movielens ['movie_id'][i],movielens ['rating'][i]
+    try:
+        Y [movie][user] = rate
+    except:
+        print (user)
+        print (movie)
+        print (rate)
