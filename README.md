@@ -40,4 +40,6 @@ Algorithms:
   <li> PCA  (Dimensionality reduction:compress data, data visualization)</li>
 </ul>
 
+## Recommender Systems
+
 ## Reinforcement Learning
