@@ -16,7 +16,7 @@ Uses: Spam filtering, speech recognition, machine translation, online advertisin
 Used in:
 <ul>
   <li> Regression problems (i.e:predict a continuous value). Can be linear or logistic regression </li>
-  <li> Classification problems (discrete values outputs, i.e:yes or not , can have more than two outputs)
+  <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
     <li> Logistic Regression </li>
     <li> Neural Networks </li>
