@@ -27,8 +27,7 @@ Used in:
       
         <li>Cost Function: Squeared Error cost Function ==> $J_{(w,n)}=\frac{1}{2m}\sum_{i=1}^m (\hat(y)^{(i)} - y^{(i)} )^2$</li>
       </ul>
-        
-    </ul>
+    </ul>        
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
     <li> Logistic Regression </li>
