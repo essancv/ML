@@ -22,13 +22,13 @@ Used in:
   <li> Regression problems (i.e:predict a continuous value). Can be linear or logistic regression </li>
     <ul>
       <li> Linear regression with one variable  </li>
+    </ul>
       
       =>  Model: $f_{w,b}= wx+ b$ (or f(x) = wx + b 
       
       => Cost Function: Squeared Error cost Function 
       
           $J_{(w,n)}=\frac{1}{2m}\sum_{i=1}^m (\hat(y)^{(i)} - y^{(i)} )^2$
-    </ul>
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
     <li> Logistic Regression </li>
