@@ -24,7 +24,6 @@ Used in:
       <li> Linear regression with one variable  </li>
       <ul>
         <li>Model ==> $f_{w,b}= wx+ b$ (or f(x) = wx + b </li>
-        \frac{1}{2m}\sum_{i=1}^m(\hat{y}^{(i)}-y^{(i)} )^2
         
         <li>Cost Function (Squeared Error cost Function) ==> $J_{(w,n)}=\sum_{i=0}^\infty$ </li>
         <li> $\hat{y}^{(i)}=f_{w,b}(x^{(i)})$</li>
