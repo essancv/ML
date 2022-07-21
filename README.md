@@ -30,10 +30,10 @@ Used in:
 </ul>
   
 ## Unsupervised Learning
-Los datos no están etiquetados y se busca alguna cosa 'especial' entre ellos.
+Los datos no están etiquetados y se busca alguna cosa 'especial' entre ellos (pattern)
 Used in:
 <ul>
-  <li> Clustering data (i.e: market segmentation,social network analysis, organize computing clusters..  </li>
+  <li> Clustering data (i.e: market segmentation,social network analysis, organize computing clusters,google news..  </li>
   <li> Audio processing (SVD - Singular Value Decomposition , i.e: split voices that came from two different sources)</li>
   <li> PCA (Principal Component Analysis) (If there are many features we can reduce them using PCA)
   <li> Anomaly detection (fraud, manufacturing,monitoring computers in data center) </li>
@@ -42,6 +42,7 @@ Algorithms:
 <ul>
   <li> K-Means (Clustering)</li>
   <li> PCA  (Dimensionality reduction:compress data, data visualization)</li>
+  <li> Anomaly Detection</li>
 </ul>
 
 ## Recommender Systems
