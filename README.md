@@ -14,7 +14,8 @@ Algoritmos que aprenden cuando se les entrena con "respuestas correctas" X(featu
 Uses: Spam filtering, speech recognition, machine translation, online advertising,self-driving car,visual inspection
 
 Training Set ==> lerning Algorithm ==> function (model)
-x => function (model) => $\hat{y}$
+
+any x => function (model) => predict  $\hat{y}$
 
 Used in:
 <ul>
