@@ -9,6 +9,10 @@ ML examples:
 
 ## Supervised Learning 
 
+Algoritmos que aprenden cuando se les entrena con "respuestas correctas" X(features) --> Y (target)
+
+Uses: Spam filtering, speech recognition, machine translation, online advertising,self-driving car,visual inspection
+
 Used in:
 <ul>
   <li> Regression problems (i.e:predict a continuous value). Can be linear or logistic regression </li>
