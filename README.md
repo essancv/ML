@@ -42,7 +42,7 @@ Algorithms:
 <ul>
   <li> K-Means (Clustering)</li>
   <li> PCA  (Dimensionality reduction:compress data, data visualization)</li>
-  <li> Anomaly Detection</li>
+  <li> Anomaly Detection (fraud detection)</li>
 </ul>
 
 ## Recommender Systems
