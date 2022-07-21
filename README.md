@@ -27,6 +27,7 @@ Used in:
         <li> Cost Function (Squeared Error cost Function) ==> $J_{(w,n)}=\frac{1}{2m}\sum_{i=1}^m(\hat{y}^{(i)}-y^{(i)} )^2$ </li>
         <li> $\hat{y}^{(i)}=f_{w,b}(x^{(i)})$</li>
         <li> $f_{w,b}(x^{(i)})=wx^{(i)}+ b$</li>
+        <li> Goal: Buscar w,n que haga que la predicción sea más aproximada al valor real para cada muestra del set de prueba </li>
       </ul>
     </ul>        
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
