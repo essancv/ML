@@ -30,7 +30,7 @@ Used in:
 </ul>
   
 ## Unsupervised Learning
-
+Los datos no están etiquetados y se busca alguna cosa 'especial' entre ellos.
 Used in:
 <ul>
   <li> Clustering data (i.e: market segmentation,social network analysis, organize computing clusters..  </li>
