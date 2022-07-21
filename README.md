@@ -17,7 +17,7 @@ Used in:
 <ul>
   <li> Regression problems (i.e:predict a continuous value). Can be linear or logistic regression </li>
     <ul>
-      <li> Linear regression with one variable ==> fw,b(x) = WX + B  (or f(x) = wx + b </li>
+      <li> Linear regression with one variable => $f_b,w= wx+ b$ (or f(x) = wx + b </li>
     </ul>
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
