@@ -31,8 +31,8 @@ Used in:
         <li>  Gradient Descent :
           <ul>
             <li> Repeat until convergence</li>
-            <li> $w = w - \alpha\frac{\partial}{\partialw}J(w,b)$ </li>
-            <li> $b = b \alpha\frac{\partial}{\partialb}J(w,b)$ </li>
+            <li> $w = w - \alpha\frac{\partial}{\partial{w}}J(w,b)$ </li>
+            <li> $b = b \alpha\frac{\partial}{\partial{b]}J(w,b)$ </li>
             <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
           </ul>
          </li>
