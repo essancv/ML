@@ -32,7 +32,7 @@ Used in:
           <ul>
             <li> Repeat until convergence</li>
             <li> $w = w - \alpha\frac{\partial}{\partial{w}}J(w,b)$ </li>
-            <li> $b = b \alpha\frac{\partial}{\partial{b]}J(w,b)$ </li>
+            <li> $b = b \alpha\frac{\partial}{\partial{b}}J(w,b)$ </li>
             <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
           </ul>
          </li>
