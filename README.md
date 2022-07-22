@@ -28,12 +28,12 @@ Used in:
         <li> $\hat{y}^{(i)}=f_{w,b}(x^{(i)})$</li>
         <li> $f_{w,b}(x^{(i)})=wx^{(i)}+ b$</li>
         <li> Goal: Buscar w,b que haga que la función de coste sea lo más pequeán posible ( cada predicción sea más aproximada al valor real para cada muestra del set de prueba)</li>
-        <li> 
+        <li>  Gradient Descent :
           <ul>
-            <li> Gradient Descent : Repeat until convergence</li>
-            <li> $w = w - \alpha\frac{\partial}{\partialw}J(w,b) </li>
-            <li> $b = b \alpha\frac{\partial}{\partialb}J(w,b) </li>
-            <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 ) </li>
+            <li> Repeat until convergence</li>
+            <li> $w = w - \alpha\frac{\partial}{\partialw}J(w,b)$ </li>
+            <li> $b = b \alpha\frac{\partial}{\partialb}J(w,b)$ </li>
+            <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
           </ul>
          </li>
       </ul>
