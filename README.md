@@ -41,6 +41,15 @@ Used in:
       <ul>
         <li>Model ==> $f_{w,b}= w_1x_1 + w_2x_2 + ..+ w_nx_n  b$ (or f_W(X) = W . X + b) , n=Nº features, W is a row vector $[w_1 w_2 ...w_n]$ y X is a row vector $[x_1,x_2...x_n]$ and . is a dot product. $x_j^{(i)}$ es el valor de la feacture j (de n) la i-esima fila del training set (de m muestras)</li>
       </ul>        
+      <li>  Gradient Descent :
+          <ul>
+            <li> Repeat until convergence</li>
+            <li> $w_1 = w_1 - \alpha\frac{\partial}{\partial{w_1}}J(W,b)$ </li>
+            <li> $b = b - \alpha\frac{\partial}{\partial{b}}J(W,b)$ </li>
+            <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
+          </ul>
+      </li>
+
       
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
