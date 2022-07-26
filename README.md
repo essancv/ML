@@ -38,7 +38,10 @@ Used in:
          </li>
       </ul>
       <li> Linear regression with multiple features </li>
-    </ul>        
+      <ul>
+        <li>Model ==> $f_{w,b}= w_1x_1 + w_2x_2 + ..+ w_nx_n  b$ (or f_W(X) = W . X + b) , n=Nº features, W is a row vector [w_1 w_2 ...w_n] y X is a row vector [x_1,x_2...x_n]</li>
+      </ul>        
+      
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
     <li> Logistic Regression </li>
