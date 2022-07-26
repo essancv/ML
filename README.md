@@ -38,7 +38,6 @@ Used in:
          </li>
       </ul>
       <li> Linear regression with multiple features </li>
-
     </ul>        
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
