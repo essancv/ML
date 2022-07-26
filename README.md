@@ -44,7 +44,7 @@ Used in:
       <li>  Gradient Descent :
           <ul>
             <li> Repeat until convergence</li>
-            <li> $w_1 = w_1 - \alpha\frac{\partial}{\partial{w_1}}J(W,b) = w_1 - \alpha\frac{1}{m}\sum_{i=1}^{m}(f_{(W,b)(X^{(i)} - y^{(i)})x_{1}^{(i)})$ </li>
+            <li> $w_1 = w_1 - \alpha\frac{\partial}{\partial{w_1}}J(W,b) = w_1 - \alpha\frac{1}{m}\sum_{i=1}^{m}(f_{(W,b)}(X^{(i)} - y^{(i)})x_{1}^{(i)})$ </li>
             <li> $w_n = w_n - \alpha\frac{\partial}{\partial{w_n}}J(W,b)$ </li>
             <li> $b = b - \alpha\frac{\partial}{\partial{b}}J(W,b)$ </li>
             <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
