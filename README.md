@@ -51,7 +51,7 @@ Used in:
             <li>  Feature scaling : make GD converge more efficientely (when features have very different numeric scales)
             <ul>
               <li> $s_{1,scaled}= \frac{x_{1}}{Max x_{1}}$ </li>
-              <li> Mean normalization $x_{1}=\frac{x_{1} - \mu_{1}}{Max x_{1} -  Min x_{1}</li>
+              <li> Mean normalization $x_{1}=\frac{x_{1} - \mu_{1}}{Max x_{1} -  Min x_{1}$</li>
             </ul>
             </li>
           </ul>
