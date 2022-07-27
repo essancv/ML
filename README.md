@@ -48,7 +48,12 @@ Used in:
             <li> $w_n = w_n - \alpha\frac{\partial}{\partial{w_n}}J(W,b)$ </li>
             <li> $b = b - \alpha\frac{\partial}{\partial{b}}J(W,b)$ </li>
             <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
-            <li>  Feature scaling : make GD converge more efficientely (when features have very different numeric scales)</li>
+            <li>  Feature scaling : make GD converge more efficientely (when features have very different numeric scales)
+            <ul>
+              <li> $s_{1,scaled}= \frac{x_{1}}{Max x_{1}}$ </li>
+              <li> Mean normalization </li>
+            </ul>
+            </li>
           </ul>
       </li>
 
