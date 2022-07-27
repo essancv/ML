@@ -50,6 +50,7 @@ Used in:
             <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
           </ul>
       </li>
+      <li>  Feature scaling : make GD converge more efficientely (when features have very different numeric scales)</li>
 
       
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
