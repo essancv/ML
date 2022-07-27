@@ -51,8 +51,8 @@ Used in:
             <li>  Feature scaling : make GD converge more efficientely (when features have very different numeric scales)
             <ul>
               <li> $s_{1,scaled}= \frac{x_{1}}{Max x_{1}}$ </li>
-              <li> Mean normalization $x_{1}=\frac{x_{1} - \mu_{1}}{Max x_{1} -  Min x_{1}}$</li>
-              <li> Z-score normalization $x_{1}=\frac{x_{1} - \sigma_{1}}{\sigma_{1}}$</li>
+              <li> Mean normalization $x_{1}=\frac{x_{1} - \mu_{1}}{Max x_{1} -  Min x_{1}}$ , where $\mu$ is average</li>
+              <li> Z-score normalization $x_{1}=\frac{x_{1} - \sigma_{1}}{\sigma_{1}}$ , where $\sigma$ is standard deviation</li>
             </ul>
             </li>
           </ul>
