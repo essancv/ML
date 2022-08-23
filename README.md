@@ -62,6 +62,9 @@ Used in:
   <li> Classification problems (predict categories, discrete values outputs, i.e:yes/not , benign/malignant/ can have more than two outputs)
   <ul>
     <li> Logistic Regression </li>
+    <ul>
+    <li> Sigmoid funtion => $g(z) = \frac{1}{1+e^{-z}}$
+    </ul>
     <li> Neural Networks </li>
     <ul>
       <li> High Bias (underfitting): More layers, more training , other NN architecture) </li>
