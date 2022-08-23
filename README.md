@@ -63,7 +63,8 @@ Used in:
   <ul>
     <li> Logistic Regression </li>
     <ul>
-    <li> Sigmoid funtion => $g(z) = \frac{1}{1+e^{-z}}$
+      <li> Sigmoid funtion => $g(z) = \frac{1}{1+e^{-z}}$ </li>
+      <li> Model => $f_{w,b}= g(wx+ b)=\frac{1}{1+e^{-(wx+b)}$ </li>
     </ul>
     <li> Neural Networks </li>
     <ul>
