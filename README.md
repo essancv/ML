@@ -66,7 +66,7 @@ Used in:
     <ul>
       <li> Sigmoid funtion => $g(z) = \frac{1}{1+e^{-z}}$ </li>
       <li> Model => $f_{w,b}= g(wx+ b)=\frac{1}{1+e^{-(wx+b)}}$ </li>
-      <li> Cost funciont  $J(w,b)={\frac{1}{m}}{\sum_{i=1}^{m}}L(f_{w,b}(x^{(i)},y^{(i)})$ , where L is the loss function</li>
+      <li> Cost funciont  $J(w,b)={\frac{1}{m}}{\sum{_{i=1}^{m}}}L(f_{w,b}(x^{(i)},y^{(i)})$ , where L is the loss function</li>
               <ul>
                 <li> if $y^{/i)} = 1  , loss = -log(f_{w,b}(x^{(i)})$ </li>
                 <li> if $y^{/i)} = 0  , loss = -log( 1 - f_{w,b}(x^{(i)})$ </li>
