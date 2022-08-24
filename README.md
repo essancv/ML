@@ -52,11 +52,12 @@ Used in:
             <ul>
               <li> $s_{1,scaled}= \frac{x_{1}}{Max x_{1}}$ </li>
               <li> Mean normalization $x_{1}=\frac{x_{1} - \mu_{1}}{Max x_{1} -  Min x_{1}}$ , where $\mu$ is average</li>
-              <li> Z-score normalization $x_{1}=\frac{x_{1} - \sigma_{1}}{\sigma_{1}}$ , where $\sigma$ is standard deviation</li>
+              <li> Z-score normalization $x_{1}=\frac{x_{1} - \sigma_{1}}{\sigma_{1}}$ , where $\sigma$ is standard deviation
               <ul>
                 <li> if $y^{/i)} = 1  , loss = -log(f_{w,b}(x^{(i)})$ </li>
                 <li> if $y^{/i)} = 0  , loss = -log( 1 - f_{w,b}(x^{(i)})$ </li>
               </ul>
+              </li>
             </ul>
             </li>
           </ul>
