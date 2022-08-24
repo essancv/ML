@@ -70,6 +70,7 @@ Used in:
               <ul>
                 <li> if $y^{/i)} = 1  , loss = -log(f_{w,b}(x^{(i)})$ </li>
                 <li> if $y^{/i)} = 0  , loss = -log( 1 - f_{w,b}(x^{(i)})$ </li>
+                <li> $L(f_{w,b}(x^{(i)},y^{(i)}) = -y^{/i)}log(f_{w,b}(x^{(i)}) - (1-y^{/i)})log( 1 - f_{w,b}(x^{(i)})$ </li>
               </ul>
       <li> Gradient descent </li>
     </ul>
