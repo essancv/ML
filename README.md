@@ -65,7 +65,7 @@ Used in:
     <ul>
       <li> Sigmoid funtion => $g(z) = \frac{1}{1+e^{-z}}$ </li>
       <li> Model => $f_{w,b}= g(wx+ b)=\frac{1}{1+e^{-(wx+b)}}$ </li>
-      <li> Cost funciont  $J(w,b)=\frac{1}{m}{\sum_{i=1}^{m}}$</li>
+      <li> Cost funciont  $J(w,b)=\frac{1}{m}{\sum}$</li>
       <li> Gradient descent </li>
       
     </ul>
