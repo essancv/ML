@@ -45,7 +45,7 @@ Used in:
           <ul>
             <li> Repeat until convergence</li>
             <li> $w_1 = w_1 - \alpha\frac{\partial}{\partial{w_1}}J(W,b) = w_1 - \alpha\frac{1}{m}\sum{_{i=1}^{m}}(f_{(W,b)}(X^{(i)} - y^{(i)})x_{1}^{(i)})$ </li>
-            <li> $w_n = w_n - \alpha\frac{\partial}{\partial{w_n}}J(W,b)$ </li>
+            <li> $w_n = w_n - \alpha\frac{\partial}{\partial{w_n}}J(W,b) = w_n - \alpha\frac{1}{m}\sum{_{i=1}^{m}}(f_{(W,b)}(X^{(i)} - y^{(i)})x_{n}^{(i)})$ </li>
             <li> $b = b - \alpha\frac{\partial}{\partial{b}}J(W,b) = b - \alpha\frac{1}{m}\sum{_{i=1}^{m}}(f_{(W,b)}(X^{(i)} - y^{(i)}))$ </li>
             <li> $\alpha$  = Learning rate, normalmente valor entre (0 y 1 )$ </li>
             <li>  Feature scaling : make GD converge more efficientely (when features have very different numeric scales)
@@ -73,7 +73,13 @@ Used in:
                 <li> $L(f_{w,b}(x^{(i)},y^{(i)}) = -y^{(i)}log(f_{w,b}(x^{(i)}) - (1-y^{(i)})log( 1 - f_{w,b}(x^{(i)})$ </li>
                 <li>  $J(w,b)=-{\frac{1}{m}}{\sum{_{i=1}^{m}}y^{(i)}log(f_{w,b}(x^{(i)}) + (1-y^{(i)})log( 1 - f_{w,b}(x^{(i)})}$ </li>
               </ul>
-      <li> Gradient descent </li>
+      <li> Gradient descent 
+          <ul>
+            <li> Repeat until convergence</li>
+            <li> $w_j = w_j - \alpha\frac{\partial}{\partial{w_j}}J(W,b) = w_j - \alpha\frac{1}{m}\sum{_{i=1}^{m}}(f_{(W,b)}(X^{(i)} - y^{(i)})x_{j}^{(i)})$ </li>
+            <li> $b = b - \alpha\frac{\partial}{\partial{b}}J(W,b) = b - \alpha\frac{1}{m}\sum{_{i=1}^{m}}(f_{(W,b)}(X^{(i)} - y^{(i)}))$ </li>
+        </ul>
+      </li>
     </ul>
     <li> Neural Networks </li>
     <ul>
